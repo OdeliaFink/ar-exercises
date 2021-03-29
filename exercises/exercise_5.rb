@@ -8,3 +8,13 @@ puts "Exercise 5"
 puts "----------"
 
 # Your code goes here ...
+@total_revenue = Store.sum(:annual_revenue)
+@average = Store.average(:annual_revenue)
+
+
+puts @total_revenue
+puts @average
+
+@high_sales = Store.where("annual_revenue > 1000000")
+
+puts @high_sales.count 
